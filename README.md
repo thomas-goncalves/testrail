@@ -3,15 +3,15 @@ testrail
 
 testrail is a Go client library for accessing the [TestRail](http://www.gurock.com/testrail/) API
 
-**travis-ci:** [![Build Status](https://travis-ci.org/educlos/testrail.svg?branch=master)](https://travis-ci.org/educlos/testrail)
+**travis-ci:** [![Build Status](https://travis-ci.org/thomas-goncalves/testrail.svg?branch=master)](https://travis-ci.org/thomas-goncalves/testrail)
 
-**GoDoc:** [![GoDoc](https://godoc.org/github.com/educlos/testrail?status.svg)](https://godoc.org/github.com/educlos/testrail)
+**GoDoc:** [![GoDoc](https://godoc.org/github.com/thomas-goncalves/testrail?status.svg)](https://godoc.org/github.com/thomas-goncalves/testrail)
 
 **Test Coverage:** 9.52%
 
 References
 ----------
-[https://godoc.org/github.com/educlos/testrail](https://godoc.org/github.com/educlos/testrail)
+[https://godoc.org/github.com/thomas-goncalves/testrail](https://godoc.org/github.com/thomas-goncalves/testrail)
 
 
 Example usage
@@ -20,7 +20,7 @@ Example usage
 ```
   package main
 
-  import "github.com/educlos/testrail"
+  import "github.com/thomas-goncalves/testrail"
 
   func main(){
 
