@@ -1,6 +1,9 @@
 package testrail
 
-import "strconv"
+import (
+	"encoding/json"
+	"strconv"
+)
 
 // Run represents a Run
 type Run struct {
@@ -88,11 +91,15 @@ func (c *Client) GetRuns(projectID int, filters ...RequestFilterForRun) ([]Run, 
 	}
 
 	returnRun := []Run{}
+	var wraperMap map[string]json.RawMessage
 	var err error
 	if c.useBetaApi {
 		err = c.sendRequestBeta("GET", uri, nil, &returnRun, "runs")
 	} else {
-		err = c.sendRequest("GET", uri, nil, &returnRun)
+		err = c.sendRequest("GET", uri, nil, &wraperMap)
+		if err == nil {
+			json.Unmarshal(wraperMap["runs"], &returnRun)
+		}
 	}
 	return returnRun, err
 }
